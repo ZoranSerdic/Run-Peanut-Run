@@ -25,6 +25,7 @@ public class RandomLevel : MonoBehaviour
 
     void Update()
     {
+        randomLevel = 1;
         switch (randomLevel)
         {
             default:
