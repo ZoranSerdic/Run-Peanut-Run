@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class GM : MonoBehaviour {
+public class GM : MonoBehaviour
+{
+    public TextMeshProUGUI realText;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private float realTime = 0.0f;
+    private float time;
+
+    void Update()
+    {
+        realTime += UnityEngine.Time.deltaTime;
+        time = Mathf.Floor(realTime);
+
+        realText.text = "" + time;
+    }
 }
