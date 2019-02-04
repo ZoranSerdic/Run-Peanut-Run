@@ -20,12 +20,10 @@ public class CameraMove : MonoBehaviour
         if (timer >= 15)
         {
             timeUpStart = true;
-            Debug.Log("Time start is up");
         }
         if (timer >= 30)
         {
             timeUpMid = true;
-            Debug.Log("Time mid is up");
         }
 
         if (timeUpStart == true && timeUpMid == true)
