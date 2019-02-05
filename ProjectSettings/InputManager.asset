@@ -73,8 +73,8 @@ InputManager:
     m_Name: Vertical_P1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: down
-    positiveButton: up
+    negativeButton: up
+    positiveButton: down
     altNegativeButton: s
     altPositiveButton: w
     gravity: 3
