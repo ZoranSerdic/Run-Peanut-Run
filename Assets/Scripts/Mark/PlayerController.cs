@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 Velocity;
     private Vector3 dir;
 
-
     void Update()
     {
         float Horizontal = Input.GetAxis(HorizontalControl);
@@ -38,11 +37,9 @@ public class PlayerController : MonoBehaviour
             }
             transform.Translate(new Vector3((rollspeed), 0, 0) * Time.deltaTime);
             Model.transform.Rotate(0, -rollRotation, 0);
-
         }
         else
         {
-            
             rollspeed = rollstartspeed;
         }
     }
