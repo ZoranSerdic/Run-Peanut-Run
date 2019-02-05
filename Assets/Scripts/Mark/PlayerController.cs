@@ -19,19 +19,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 dir;
 
 
-	void Update ()
+    void Update()
     {
         //rotation.z ( forward = negative ) 
 
         float h = Input.GetAxis(HorizontalControl);
         float j = Input.GetAxis(VerticalControl);
 
-        if (true)
-        {
-            //looking in a direction
-            dir = this.transform.position - new Vector3(-j, 0, -h);
-            this.transform.LookAt(dir);
-        }
+        //looking in a direction
+        dir = this.transform.position - new Vector3(h, 0, -j);
+        this.transform.LookAt(dir);
 
         if (Input.GetKey(KeyCode.Joystick1Button0))
         {
