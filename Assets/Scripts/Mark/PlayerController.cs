@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private string VerticalControl = "Vertical_P1";
     [SerializeField]
     private string SpeedControl = "VerticalRight_P1";
-    private float roll = 2.4f;
+    private float rollstartspeed = 2.4f;
     private float rollRotation = 5;
     private float rollspeed = 0;
     private int Maxrollspeed = 6;
@@ -23,13 +23,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //rotation.z ( forward = negative ) 
+        float Horizontal = Input.GetAxis(HorizontalControl);
+        float Vertical = Input.GetAxis(VerticalControl);
 
-        float h = Input.GetAxis(HorizontalControl);
-        float j = Input.GetAxis(VerticalControl);
-
-        //looking in a direction
-        dir = this.transform.position - new Vector3(h, 0, -j);
+        //looking in a direction 
+        dir = this.transform.position - new Vector3(-Vertical, 0, -Horizontal);
         this.transform.LookAt(dir);
 
         if (Input.GetKey(KeyCode.Joystick1Button0))
@@ -45,7 +43,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             
-            rollspeed = roll;
+            rollspeed = rollstartspeed;
         }
     }
 }
