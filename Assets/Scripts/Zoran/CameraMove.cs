@@ -8,10 +8,10 @@ public class CameraMove : MonoBehaviour
     public float camMidMoveSpeed = 3f;
     public float camEndMoveSpeed = 4f;
 
-    private float timer;
+    public float timer;
 
-    private bool timeUpStart = false;
-    private bool timeUpMid = false;
+    public bool timeUpStart = false;
+    public bool timeUpMid = false;
 
 	void Update ()
     {
