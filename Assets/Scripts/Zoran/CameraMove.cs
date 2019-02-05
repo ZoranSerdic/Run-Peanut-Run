@@ -26,7 +26,7 @@ public class CameraMove : MonoBehaviour
             timeUpMid = true;
         }
 
-        if (GameObject.Find("GM").GetComponent<GM>().timer >= 62)
+        if (GameObject.Find("GM").GetComponent<GM>().timer >= 56)
         {
             transform.Translate(Vector3.right * 0 * Time.deltaTime);
         }
