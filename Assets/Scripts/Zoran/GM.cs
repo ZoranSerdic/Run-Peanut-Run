@@ -9,7 +9,7 @@ public class GM : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     private float realTime;
-    private float timer;
+    public float timer;
 
 	void Start ()
     {

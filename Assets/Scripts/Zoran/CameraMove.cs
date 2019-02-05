@@ -26,7 +26,15 @@ public class CameraMove : MonoBehaviour
             timeUpMid = true;
         }
 
-        if (timeUpStart == true && timeUpMid == true)
+        if (GameObject.Find("GM").GetComponent<GM>().timer >= 68)
+        {
+            transform.Translate(Vector3.right * 0 * Time.deltaTime);
+        }
+        else if(Input.GetKey(KeyCode.F))
+        {
+            transform.Translate(Vector3.right * 10 * Time.deltaTime);
+        }
+        else if (timeUpStart == true && timeUpMid == true)
         {
             transform.Translate(Vector3.right * camEndMoveSpeed * Time.deltaTime);
         }
