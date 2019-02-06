@@ -7,11 +7,15 @@ public class CameraMove : MonoBehaviour
     public float camStartMoveSpeed = 2f;
     public float camMidMoveSpeed = 3f;
     public float camEndMoveSpeed = 4f;
+    public float camEndEndMoveSpeed = 5.2f;
+
+    public float finishTime = 70f;
 
     public float timer;
 
     public bool timeUpStart = false;
     public bool timeUpMid = false;
+    public bool timeUpEnd = false;
 
 	void Update ()
     {
@@ -25,14 +29,22 @@ public class CameraMove : MonoBehaviour
         {
             timeUpMid = true;
         }
+        if (timer >= 45)
+        {
+            timeUpEnd = true;
+        }
 
-        if (GameObject.Find("GM").GetComponent<GM>().timer >= 56)
+        if (GameObject.Find("GM").GetComponent<GM>().timer >= finishTime)
         {
             transform.Translate(Vector3.right * 0 * Time.deltaTime);
         }
         else if(Input.GetKey(KeyCode.F))
         {
             transform.Translate(Vector3.right * 10 * Time.deltaTime);
+        }
+        else if(timeUpEnd == true)
+        {
+            transform.Translate(Vector3.right * camEndEndMoveSpeed * Time.deltaTime);
         }
         else if (timeUpStart == true && timeUpMid == true)
         {
