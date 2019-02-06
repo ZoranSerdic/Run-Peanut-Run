@@ -13,7 +13,6 @@ public class Elephant : MonoBehaviour
         else if (GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpStart == true && GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpMid == true)
         {
             transform.Translate(Vector3.right * (GameObject.Find("Main Camera").GetComponent<CameraMove>().camEndMoveSpeed * Time.deltaTime));
-            transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
         }
         else if (GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpStart == true)
         {
@@ -29,17 +28,43 @@ public class Elephant : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Destroyable")
+        if (collision.transform.tag == "Peanut")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Peanut>().Die();
+        }
+        else if (collision.transform.tag == "Destroyable")
+        {
+            try
+            {
+                collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+            }
+            catch
+            {
+
+            }
+            //Destroy(collision.gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Destroyable")
+        if (other.transform.tag == "Peanut")
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Peanut>().Die();
+        }
+        else if (other.transform.tag == "Destroyable")
+        {
+            try
+            {
+                other.GetComponentInChildren<ParticleSystem>().Play();
+                Debug.Log(other.GetComponentInChildren<ParticleSystem>().gameObject.name);
+            }
+            catch
+            {
+
+            }
+            
+            //Destroy(other.gameObject);
         }
     }
 }

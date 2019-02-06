@@ -5,16 +5,20 @@ using UnityEditor;
 
 public class Peanut : MonoBehaviour
 {
+    private GameObject PindaPrefab;
+    private Vector3 SpawnPos;
+
     [MenuItem("AssetDatabase/LoadAssetExample")]
-
-
 
     private void Start()
     {
-        GameObject PindaPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Textures/texture.jpg", typeof(GameObject));
+        PindaPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefab/Pindakaas_Prefab.prefab", typeof(GameObject));
     }
 
-    void Update ()
+    public void Die()
     {
+        SpawnPos = new Vector3(transform.position.x, -0.4f, transform.position.z);
+        Instantiate(PindaPrefab, SpawnPos, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }
