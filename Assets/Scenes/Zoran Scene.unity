@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44181868, g: 0.49074525, b: 0.5707162, a: 1}
+  m_IndirectSpecularColor: {r: 0.4418192, g: 0.49074584, b: 0.5707167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14427,6 +14427,10 @@ Prefab:
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 7a6fe0fe983b70747a67aefb9e65076c, type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6fe0fe983b70747a67aefb9e65076c, type: 3}
   m_IsPrefabAsset: 0
@@ -25097,6 +25101,10 @@ Prefab:
       value: -161.222
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 9cdcb8ac03732e047b7737c00553cc6a, type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 9cdcb8ac03732e047b7737c00553cc6a, type: 3}
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}
@@ -40351,6 +40359,10 @@ Prefab:
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 7a6fe0fe983b70747a67aefb9e65076c, type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6fe0fe983b70747a67aefb9e65076c, type: 3}
   m_IsPrefabAsset: 0
@@ -43342,6 +43354,14 @@ Prefab:
       value: -193.42299
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 8299f3cffb3c4ba40b9e97f415560473, type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 8299f3cffb3c4ba40b9e97f415560473, type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 8299f3cffb3c4ba40b9e97f415560473, type: 3}
       propertyPath: m_TagString
       value: Destroyable
       objectReference: {fileID: 0}

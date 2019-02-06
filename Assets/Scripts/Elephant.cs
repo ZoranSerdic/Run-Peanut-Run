@@ -13,6 +13,7 @@ public class Elephant : MonoBehaviour
         else if (GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpStart == true && GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpMid == true)
         {
             transform.Translate(Vector3.right * (GameObject.Find("Main Camera").GetComponent<CameraMove>().camEndMoveSpeed * Time.deltaTime));
+            transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
         }
         else if (GameObject.Find("Main Camera").GetComponent<CameraMove>().timeUpStart == true)
         {
