@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 136270885183327754}
   m_Layer: 0
   m_Name: Player_2
-  m_TagString: Player
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,8 +155,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1745447431643144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.2999954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4118177359163432}
@@ -301,10 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95684e2c2a3825e4a93690c5a9d5aeb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 0}
+  Model: {fileID: 1745447431643144}
   HorizontalControl: Horizontal_P2
   VerticalControl: Vertical_P2
   SpeedControl: VerticalRight_P2
+  Joystick: Fire2
 --- !u!136 &136270885183327754
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -315,6 +316,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.3
+  m_Height: 1.5
   m_Direction: 2
   m_Center: {x: 0, y: -0.100000024, z: 0.225}
