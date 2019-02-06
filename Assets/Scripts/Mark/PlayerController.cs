@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private string VerticalControl = "Vertical_P1";
     [SerializeField]
     private string SpeedControl = "VerticalRight_P1";
+    [SerializeField]
+    private string Joystick = "Joystick1Button0";
     private float rollstartspeed = 2.4f;
     private float rollRotation = 5;
     private float rollspeed = 0;
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
         dir = this.transform.position - new Vector3(-Vertical, 0, -Horizontal);
         this.transform.LookAt(dir);
 
-        if (Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.GetKey(Joystick))
         {
             if (rollspeed < Maxrollspeed)
             {
