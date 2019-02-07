@@ -116,9 +116,10 @@ GameObject:
   - component: {fileID: 54853080007517602}
   - component: {fileID: 136684783066957488}
   - component: {fileID: 114194900453027002}
+  - component: {fileID: 114003140275581142}
   m_Layer: 0
   m_Name: Player_4
-  m_TagString: Destroyable
+  m_TagString: Peanut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,6 +349,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114003140275581142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806437432246464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a049222395f0a419607b2a5f8235ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PindaPrefab: {fileID: 1541404685734914, guid: 753b495ef6979cc4c9c2c3a0d5affc57,
+    type: 2}
 --- !u!114 &114194900453027002
 MonoBehaviour:
   m_ObjectHideFlags: 1

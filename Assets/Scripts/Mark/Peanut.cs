@@ -5,15 +5,9 @@ using UnityEditor;
 
 public class Peanut : MonoBehaviour
 {
+    [SerializeField]
     private GameObject PindaPrefab;
     private Vector3 SpawnPos;
-
-    [MenuItem("AssetDatabase/LoadAssetExample")]
-
-    private void Start()
-    {
-        PindaPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefab/Pindakaas_Prefab.prefab", typeof(GameObject));
-    }
 
     public void Die()
     {

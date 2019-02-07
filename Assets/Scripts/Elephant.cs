@@ -5,14 +5,8 @@ using UnityEditor;
 
 public class Elephant : MonoBehaviour
 {
+    [SerializeField]
     private ParticleSystem System;
-
-    [MenuItem("AssetDatabase/LoadAssetExample")]
-
-    private void Start()
-    {
-        System = (ParticleSystem)AssetDatabase.LoadAssetAtPath("Assets/Art/HitEffect/Stars.prefab", typeof(ParticleSystem));
-    }
 
     void Update ()
     {
@@ -32,9 +26,9 @@ public class Elephant : MonoBehaviour
         {
             transform.Translate(Vector3.right * (GameObject.Find("Main Camera").GetComponent<CameraMove>().camStartMoveSpeed * Time.deltaTime));
         }
-        //transform.Translate(Vector3.right * -0.2f * Time.deltaTime);
+
         transform.Translate(Vector3.right * 0.3f * Time.deltaTime);
-    }
+	}
 
     private void OnCollisionEnter(Collision collision)
     {

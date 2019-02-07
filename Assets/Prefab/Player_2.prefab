@@ -101,9 +101,10 @@ GameObject:
   - component: {fileID: 54862131913843394}
   - component: {fileID: 114164814971426496}
   - component: {fileID: 136270885183327754}
+  - component: {fileID: 114450628587654356}
   m_Layer: 0
   m_Name: Player_2
-  m_TagString: Destroyable
+  m_TagString: Peanut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,6 +307,19 @@ MonoBehaviour:
   VerticalControl: Vertical_P2
   SpeedControl: VerticalRight_P2
   Joystick: Fire2
+--- !u!114 &114450628587654356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745447431643144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a049222395f0a419607b2a5f8235ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PindaPrefab: {fileID: 1541404685734914, guid: 753b495ef6979cc4c9c2c3a0d5affc57,
+    type: 2}
 --- !u!136 &136270885183327754
 CapsuleCollider:
   m_ObjectHideFlags: 1
