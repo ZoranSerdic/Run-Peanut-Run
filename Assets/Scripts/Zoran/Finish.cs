@@ -7,6 +7,8 @@ public class Finish : MonoBehaviour
 {
     public GameObject finish;
 
+    public Transform teleport;
+
     private float timer;
 
     private bool reachedFinish;
@@ -27,8 +29,10 @@ public class Finish : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Peanut" && reachedFinish == false)
         {
+            other.transform.position = teleport.position;
+
             reachedFinish = true;
             Debug.Log(other.name + " reached the finish line!");
         }
