@@ -1,9 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Elephant : MonoBehaviour
 {
+    private ParticleSystem System;
+
+    [MenuItem("AssetDatabase/LoadAssetExample")]
+
+    private void Start()
+    {
+        System = (ParticleSystem)AssetDatabase.LoadAssetAtPath("Assets/Art/HitEffect/Stars.prefab", typeof(ParticleSystem));
+    }
+
     void Update ()
     {
         if (Input.GetKey(KeyCode.F))
@@ -34,15 +44,9 @@ public class Elephant : MonoBehaviour
         }
         else if (collision.transform.tag == "Destroyable")
         {
-            try
-            {
-                collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
-            }
-            catch
-            {
-
-            }
-            //Destroy(collision.gameObject);
+            Instantiate(System, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(collision.gameObject.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -54,17 +58,8 @@ public class Elephant : MonoBehaviour
         }
         else if (other.transform.tag == "Destroyable")
         {
-            try
-            {
-                other.GetComponentInChildren<ParticleSystem>().Play();
-                Debug.Log(other.GetComponentInChildren<ParticleSystem>().gameObject.name);
-            }
-            catch
-            {
-
-            }
-            
-            //Destroy(other.gameObject);
+            Instantiate(System,other.transform.position,Quaternion.identity);
+            Destroy(other.gameObject);
         }
     }
 }
