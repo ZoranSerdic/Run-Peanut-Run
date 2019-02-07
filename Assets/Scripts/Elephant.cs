@@ -33,7 +33,7 @@ public class Elephant : MonoBehaviour
             transform.Translate(Vector3.right * (GameObject.Find("Main Camera").GetComponent<CameraMove>().camStartMoveSpeed * Time.deltaTime));
         }
         //transform.Translate(Vector3.right * -0.2f * Time.deltaTime);
-        transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
+        transform.Translate(Vector3.right * 0.3f * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
