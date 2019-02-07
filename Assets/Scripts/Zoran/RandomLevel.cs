@@ -10,22 +10,20 @@ public class RandomLevel : MonoBehaviour
     public GameObject Level_02;
     public GameObject Level_03;
     public GameObject Level_04;
-    public GameObject Level_05;
 
     void Awake()
     {
         randomLevel = Random.Range(1, 5);
+        Debug.Log("Random level = " + randomLevel);
 
         Level_01.SetActive(false);
         Level_02.SetActive(false);
         Level_03.SetActive(false);
         Level_04.SetActive(false);
-        Level_05.SetActive(false);
     }
 
     void Update()
     {
-        randomLevel = 1;
         switch (randomLevel)
         {
             default:
@@ -43,9 +41,6 @@ public class RandomLevel : MonoBehaviour
                 break;
             case 4:
                 Level_04.SetActive(true);
-                break;
-            case 5:
-                Level_05.SetActive(true);
                 break;
         }
     }
